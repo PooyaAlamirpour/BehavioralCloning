@@ -34,8 +34,7 @@ Take a look around the environment and try to keep the car middle of the road. O
 ### Designing the architecture of the model
 I have designed a model with five convolutional networks. For the first layer, I have gotten average from pixels of each image by dividing per 255. the size of the output of the first layer is 64x64x3. Then a 2D-Conv network is added. I have used `Relu` activation for connecting this 2D-Conv to another layer. Another layer is again 2D-Conv. I have attached five 2D-Conv, which there is `Relu` activation between each one. I have completed my design by adding some flatten and dropout layers to my network.You can see the summary of my design in the below table:
 
-![track1](IMAGE_URL)
-Image 2: *The summary of model*
+![The summary of model](https://github.com/PooyaAlamirpour/BehavioralCloning/blob/master/Pictures/summary-model.png)
 
 You can see the implemention of this model below:
 ```python
