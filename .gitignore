@@ -1,0 +1,6 @@
+dataset
+.ipynb_checkpoints
+models
+*.swp
+*.p
+*.mp4

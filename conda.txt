@@ -1,0 +1,5 @@
+conda install -c conda-forge opencv
+conda install -c anaconda scikit-learn
+conda install -c anaconda pillow
+conda install -c anaconda pydot
+conda install -c conda-forge python-socketio
