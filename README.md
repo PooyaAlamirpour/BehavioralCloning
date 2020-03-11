@@ -25,11 +25,9 @@ Then open the simulator and the wait for loading. Finally, click on the Autonomo
 ### Generating dataset
 [Unity Car Simulation](https://d17h27t6h515a5.cloudfront.net/topher/2016/November/5831f3a4_simulator-windows-64/simulator-windows-64.zip) has two modes which are indicated by two buttons. One of them is labeled as Training Mode. If you click on it, you will face an environment and a car that you can control by using the Arrow-Key. 
 
-![track1](https://github.com/PooyaAlamirpour/BehavioralCloning/blob/master/Pictures/welcome-simulation.png)
-Image 1: *Welcome page of simulation*
+![Welcome page of simulation](https://github.com/PooyaAlamirpour/BehavioralCloning/blob/master/Pictures/welcome-simulation.png)
 
-![track1](https://github.com/PooyaAlamirpour/BehavioralCloning/blob/master/Pictures/training-mode.png)
-Image 2: *Training mode.*
+![Training mode](https://github.com/PooyaAlamirpour/BehavioralCloning/blob/master/Pictures/training-mode.png)
 
 Take a look around the environment and try to keep the car middle of the road. Once you reckon you can drive carefully, press on the record button on top-right, then choose a folder on your system for saving each taken frame, then recording will be started. Try to finish 2 or 3 laps and stop recording. Under the destination folder, lots of images are stored from three installed cameras on the three sides of the car, front, left, and right. I have collected around 31,000 images, and I think it is enough. Now, it is time for designing architecture.
 
@@ -73,16 +71,13 @@ from keras.utils import plot_model
 
 plot_model(model, to_file=os.path.join('plot', 'model.png'))
 ```
-![track1]()
 
-<img src="https://github.com/PooyaAlamirpour/BehavioralCloning/blob/master/Pictures/network-plot.png" width="280" height="280" border="10" />
-Image 2: *The model graph*
+![Network plot](https://github.com/PooyaAlamirpour/BehavioralCloning/blob/master/Pictures/network-plot.png)
 
 ### Preprocessing and Training
 Preprocessing the input of the network is one of the crucial techniques that must be considered. Recently I have figured out that there is another essential technique which is called permutation importance. In this technique, you can find which parameter in the dataset is not crucial or has less impact, and one of them has more effective. In this project, we have three cameras, as mentioned. At the beginning of implementing the project, it seems, the center camera which is installed in front of the car is just enough. But after training the model, you will reckon, two other cameras data are essential for keeping the vehicle stay in the middle of the road.So I have used the generated images from all three cameras. Let's look at one of the input images.
 
-![track1](https://github.com/PooyaAlamirpour/BehavioralCloning/blob/master/Pictures/one-sample-image.png)
-Image 2: *One sample frame*
+![One sample frame](https://github.com/PooyaAlamirpour/BehavioralCloning/blob/master/Pictures/one-sample-image.png)
 
 As you can be noticed, except the surface and side of the road, there are lots of information in the picture such as trees, mountain, lake, etc. We can eliminate all of them to a certain extent by cropping the image. 
 ```python
