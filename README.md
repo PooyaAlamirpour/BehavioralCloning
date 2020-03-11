@@ -73,7 +73,9 @@ from keras.utils import plot_model
 
 plot_model(model, to_file=os.path.join('plot', 'model.png'))
 ```
-![track1](https://github.com/PooyaAlamirpour/BehavioralCloning/blob/master/Pictures/network-plot.png)
+![track1]()
+
+<img src="https://github.com/PooyaAlamirpour/BehavioralCloning/blob/master/Pictures/network-plot.png" width="280" height="280" border="10" />
 Image 2: *The model graph*
 
 ### Preprocessing and Training
