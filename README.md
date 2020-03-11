@@ -76,7 +76,7 @@ plot_model(model, to_file=os.path.join('plot', 'model.png'))
 ### Preprocessing and Training
 Preprocessing the input of the network is one of the crucial techniques that must be considered. Recently I have figured out that there is another essential technique which is called permutation importance. In this technique, you can find which parameter in the dataset is not crucial or has less impact, and one of them has more effective. In this project, we have three cameras, as mentioned. At the beginning of implementing the project, it seems, the center camera which is installed in front of the car is just enough. But after training the model, you will reckon, two other cameras data are essential for keeping the vehicle stay in the middle of the road.So I have used the generated images from all three cameras. Let's look at one of the input images.
 
-![One sample frame](https://github.com/PooyaAlamirpour/BehavioralCloning/blob/master/Pictures/one-sample-image.png)
+![One sample frame](https://github.com/PooyaAlamirpour/BehavioralCloning/blob/master/Pictures/one-sample-image.jpg)
 
 As you can be noticed, except the surface and side of the road, there are lots of information in the picture such as trees, mountain, lake, etc. We can eliminate all of them to a certain extent by cropping the image. 
 ```python
